@@ -42,11 +42,10 @@ def login_full(page: Page):
     page.get_by_role("option", name="Менеджер", exact=True).click()
     page.get_by_role("button", name="Войти").click()
     page.get_by_role("button", name="ОК").click()
-    page.get_by_label("css-kzdnpn-MuiButtonBase-root").click()
     page.locator(".MuiButtonBase-root").first.click()
     page.locator(".css-1uzvz49").click()
 
-    print("Авторизация GOOD")
+    print('\n'"Авторизация GOOD")
 
 
 def login_short(page: Page):
@@ -65,5 +64,5 @@ def login_short(page: Page):
     page.locator(".MuiButtonBase-root").first.click()
     page.locator(".css-1uzvz49").click()
 
-    print('\n'"Авторизация Короткая авторизация GOOD")
+    print('\n'"Короткая авторизация GOOD")
     time.sleep(1)

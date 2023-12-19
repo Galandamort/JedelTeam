@@ -11,35 +11,33 @@ from test_review import review_verification
 from test_rating import ratings_verification
 
 
-def test_check():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(args=['--start-maximized'], headless=False)
-        with browser.new_page(no_viewport=True) as page:
-            login_short(page)                        #Укороченная авторизация
-            # login_full(page)
-            profile_verification(page)               #Страница профиля
-            statistics_verification(page)            #Страница статистики
-            # application_verification(page)           #Страница заявки
-            courier_verification(page)               #Страница курьера
-            # partner_verification(page)               #Страница партнера
-            shipment_point_verification(page)        #Страница точки вывоза
-            product_verification(page)               #Страница продуктов
-            monitoring_verification(page)            #Страница мониторинга
-            delivery_zones_verification(page)        #Страница зоны доставки
-            # users_verification(page)                 #Страница пользователей
-            review_verification(page)                #Страница отзыва
-            ratings_verification(page)               #Страница рейтинга
-            # order_groups_verification(page)          #Страница группы заявок
-            # order_chain_verification(page)           #Страница многоэтапной доставки
-
-        browser.close()
-
-#
-# def test_for_test():
+# def test_check():
 #     with sync_playwright() as p:
 #         browser = p.chromium.launch(args=['--start-maximized'], headless=False)
 #         with browser.new_page(no_viewport=True) as page:
-#             login_short(page)
+#             # login_short(page)                        #Укороченная авторизация
+#             login_full(page)
+#             profile_verification(page)  # Страница профиля
+#             statistics_verification(page)  # Страница статистики
+#             # application_verification(page)           #Страница заявки
+#             courier_verification(page)  # Страница курьера
+#             # partner_verification(page)               #Страница партнера
+#             shipment_point_verification(page)  # Страница точки вывоза
+#             product_verification(page)  # Страница продуктов
+#             monitoring_verification(page)  # Страница мониторинга
+#             delivery_zones_verification(page)  # Страница зоны доставки
+#             # users_verification(page)                 #Страница пользователей
+#             review_verification(page)  # Страница отзыва
+#             ratings_verification(page)  # Страница рейтинга
+#             # order_groups_verification(page)          #Страница группы заявок
+#             # order_chain_verification(page)           #Страница многоэтапной доставки
 #
 #         browser.close()
-#
+
+def test_for_test():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(args=['--start-maximized'], headless=False)
+        with browser.new_page(no_viewport=True) as page:
+            login_short(page)
+
+        browser.close()
