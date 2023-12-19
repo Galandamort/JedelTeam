@@ -34,10 +34,11 @@ from test_rating import ratings_verification
 #
 #         browser.close()
 
+
 def test_for_test():
     with sync_playwright() as p:
         browser = p.chromium.launch(args=['--start-maximized'], headless=False)
         with browser.new_page(no_viewport=True) as page:
             login_short(page)
-
+            order_chain_verification(page)
         browser.close()
