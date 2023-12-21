@@ -128,4 +128,3 @@ def statistics_verification(page: Page):
 
     print("Статистика GOOD")
     sleep(1)
-

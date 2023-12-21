@@ -9,8 +9,9 @@ from test_monitoring import monitoring_verification
 from test_delivery_zones import delivery_zones_verification
 from test_review import review_verification
 from test_rating import ratings_verification
+from test_order_chain import order_chain_verification
 
-
+#
 # def test_check():
 #     with sync_playwright() as p:
 #         browser = p.chromium.launch(args=['--start-maximized'], headless=False)
@@ -30,7 +31,7 @@ from test_rating import ratings_verification
 #             review_verification(page)  # Страница отзыва
 #             ratings_verification(page)  # Страница рейтинга
 #             # order_groups_verification(page)          #Страница группы заявок
-#             # order_chain_verification(page)           #Страница многоэтапной доставки
+#             order_chain_verification(page)           #Страница многоэтапной доставки
 #
 #         browser.close()
 
