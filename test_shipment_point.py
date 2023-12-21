@@ -10,7 +10,7 @@ def shipment_point_verification(page: Page):
     page.get_by_placeholder("Города").click()
     page.get_by_role("menuitem", name="Алматы").locator("label").click()
     page.get_by_text("На карте").click()
-    time.sleep(2)
+    time.sleep(4)
     page.locator("#map-container").click()
     page.get_by_label("Офис").check()
     page.locator("input[name=\"block\"]").fill("1")

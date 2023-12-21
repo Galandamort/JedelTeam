@@ -38,6 +38,7 @@ def login_full(page: Page):
     page.get_by_role("textbox").nth(2).fill("1")
     page.get_by_role("textbox").nth(3).fill("1")
     page.get_by_role("textbox").nth(4).fill("1")
+    time.sleep(3)
     page.get_by_role("button", name="Подтвердить").click()
     page.get_by_role("option", name="Менеджер", exact=True).click()
     page.get_by_role("button", name="Войти").click()
